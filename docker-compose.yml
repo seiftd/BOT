@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  navigi-bot:
+    build: .
+    container_name: navigi-bot
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+    networks:
+      - navigi-network
+
+networks:
+  navigi-network:
+    driver: bridge
+
+volumes:
+  navigi-data:

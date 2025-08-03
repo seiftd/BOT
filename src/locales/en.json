@@ -1,0 +1,147 @@
+{
+  "welcome": {
+    "title": "🎉 Welcome to NAVIGi!",
+    "message": "Welcome to NAVIGi! The best platform to watch ads and earn rewards.\n\n💰 Earn points by watching ads\n🏆 Participate in contests\n💎 Upgrade to VIP for more benefits\n💸 Withdraw your earnings\n\nClick /start to begin your journey!",
+    "returning": "Welcome back! 🎉\nYour current balance: {points} points"
+  },
+  "menu": {
+    "main": "🏠 Main Menu",
+    "earn": "💰 Earn",
+    "contests": "🏆 Contests",
+    "vip": "💎 VIP",
+    "profile": "👤 Profile",
+    "referral": "👥 Referral",
+    "settings": "⚙️ Settings"
+  },
+  "earn": {
+    "title": "💰 Earn Points",
+    "watch_ads": "📺 Watch Ads ({watched}/{limit})",
+    "daily_tasks": "📋 Daily Tasks",
+    "mining": "⛏️ VIP Mining",
+    "no_ads": "❌ No ads available. Try again later!",
+    "daily_limit": "🚫 You've reached your daily ad limit!",
+    "timer_wait": "⏰ Please wait {minutes}m {seconds}s before watching next ad",
+    "ad_completed": "✅ Ad completed! You earned {points} points!",
+    "vip_bonus": "💎 VIP Bonus: +{bonus} points!"
+  },
+  "daily_tasks": {
+    "title": "📋 Daily Tasks",
+    "login": "🔄 Daily Login",
+    "channel_sub": "📢 Subscribe to Channel",
+    "completed": "✅ Completed",
+    "claim": "🎁 Claim ({points} points)",
+    "claimed": "✅ Claimed",
+    "timer": "⏰ Available in {hours}h {minutes}m",
+    "login_claimed": "🎁 Daily login reward claimed! +{points} points",
+    "channel_claimed": "🎁 Channel subscription reward claimed! +{points} points",
+    "check_subscription": "❌ Please subscribe to our channel first: {channel}"
+  },
+  "contests": {
+    "title": "🏆 Contests",
+    "daily": "📅 Daily Contest",
+    "weekly": "📅 Weekly Contest",
+    "monthly": "📅 Monthly Contest",
+    "vip": "💎 VIP Contest",
+    "not_eligible": "❌ You need to watch {required} ads to be eligible",
+    "joined": "✅ You've joined the contest!",
+    "already_joined": "⚠️ You're already participating in this contest",
+    "ended": "⏰ This contest has ended",
+    "winner": "🎉 Congratulations! You won {points} points!",
+    "no_contest": "❌ No active contest available",
+    "requirements": "📋 Requirements: Watch {ads} ads with {timer}min intervals",
+    "progress": "📊 Progress: {watched}/{required} ads",
+    "time_left": "⏰ Time left: {time}",
+    "winners": "🏆 Winners: {count}",
+    "prize": "🎁 Prize: {prize}"
+  },
+  "vip": {
+    "title": "💎 VIP Upgrade",
+    "current": "Current: {level}",
+    "expires": "Expires: {date}",
+    "king": {
+      "name": "👑 King VIP",
+      "price": "$2.5 USDT",
+      "benefits": "• 10 points daily mining\n• 30 ads daily limit\n• VIP contests access"
+    },
+    "emperor": {
+      "name": "👨‍💼 Emperor VIP",
+      "price": "$9 USDT",
+      "benefits": "• 25 points daily mining\n• 40 ads daily limit\n• VIP contests access\n• VIP leaderboard"
+    },
+    "lord": {
+      "name": "🏛️ Lord VIP",
+      "price": "$20 USDT",
+      "benefits": "• 40 points daily mining\n• 60 ads daily limit\n• VIP contests access\n• Withdrawal minimum: $2 USDT\n• VIP leaderboard"
+    },
+    "purchase": "💳 Purchase",
+    "payment_methods": "💳 Payment Methods:\n\n🟡 TRC20 USDT:\n`{trc20}`\n\n💎 TON (1 TON = $3.6):\n`{ton}`\n\nSend payment and then send transaction hash",
+    "payment_sent": "✅ Payment submitted! Please wait for admin approval.",
+    "invalid_hash": "❌ Invalid transaction hash format",
+    "mining_claimed": "⛏️ Mining reward claimed! +{points} points",
+    "mining_available": "⛏️ Mining available! Click to claim {points} points",
+    "no_mining": "❌ No mining rewards available"
+  },
+  "profile": {
+    "title": "👤 Profile",
+    "points": "💰 Points: {points}",
+    "usdt_value": "💵 Value: ${usdt} USDT",
+    "vip_status": "💎 VIP: {level}",
+    "vip_expires": "⏰ Expires: {date}",
+    "referrals": "👥 Referrals: {count}",
+    "withdraw": "💸 Withdraw",
+    "history": "📊 History"
+  },
+  "withdraw": {
+    "title": "💸 Withdraw",
+    "methods": "Choose withdrawal method:",
+    "binance_pay": "🟡 Binance Pay (Min: ${min} USDT)",
+    "ton_wallet": "💎 TON Wallet (Min: {min} TON)",
+    "usdt_trc20": "🟢 USDT TRC20 (Min: ${min} USDT)",
+    "insufficient": "❌ Insufficient balance. You need {required} points (${usdt} USDT)",
+    "enter_address": "Enter your {method}:",
+    "confirm": "Confirm withdrawal:\n💰 Amount: {points} points (${usdt} USDT)\n📍 Address: {address}\n💳 Method: {method}",
+    "submitted": "✅ Withdrawal request submitted! Please wait for processing.",
+    "invalid_address": "❌ Invalid address format"
+  },
+  "referral": {
+    "title": "👥 Referral System",
+    "code": "🔗 Your referral link:\n{link}",
+    "stats": "📊 Your Stats:\n👥 Total referrals: {count}\n💰 Earnings: {points} points",
+    "leaderboard": "🏆 Weekly Leaderboard",
+    "share": "📤 Share Link",
+    "reward": "🎁 +{points} points for new referral!",
+    "vip_bonus": "💎 +{points} points for VIP referral!"
+  },
+  "admin": {
+    "title": "👨‍💼 Admin Panel",
+    "users": "👥 Users: {count}",
+    "pending_vip": "💎 Pending VIP: {count}",
+    "pending_withdrawals": "💸 Pending Withdrawals: {count}",
+    "send_notification": "📢 Send Notification",
+    "manage_contests": "🏆 Manage Contests",
+    "manage_ads": "📺 Manage Ads",
+    "approve_payments": "✅ Approve Payments",
+    "user_management": "👥 User Management"
+  },
+  "buttons": {
+    "back": "⬅️ Back",
+    "refresh": "🔄 Refresh",
+    "confirm": "✅ Confirm",
+    "cancel": "❌ Cancel",
+    "next": "➡️ Next",
+    "previous": "⬅️ Previous",
+    "close": "❌ Close"
+  },
+  "errors": {
+    "generic": "❌ An error occurred. Please try again.",
+    "not_found": "❌ Not found",
+    "permission_denied": "❌ Permission denied",
+    "rate_limit": "⏰ Please wait before trying again",
+    "maintenance": "🔧 Bot is under maintenance. Please try again later."
+  },
+  "success": {
+    "generic": "✅ Operation completed successfully!",
+    "saved": "✅ Saved successfully!",
+    "updated": "✅ Updated successfully!"
+  }
+}
