@@ -34,8 +34,13 @@ class MenuHandler {
                 `💵 ${localization.t('profile.usdt_value', lang, { usdt: stats.pointsValue })}\n` +
                 `📺 ${localization.t('earn.watch_ads', lang, { watched: stats.dailyAdsWatched, limit: stats.dailyAdsLimit })}\n`;
             
+            const webAppUrl = process.env.WEBAPP_URL || 'https://your-domain.com';
+            
             const keyboard = {
                 inline_keyboard: [
+                    [
+                        { text: '🚀 Open NAVIGi App', web_app: { url: webAppUrl } }
+                    ],
                     [
                         { text: localization.t('menu.earn', lang), callback_data: 'menu_earn' },
                         { text: localization.t('menu.contests', lang), callback_data: 'menu_contests' }

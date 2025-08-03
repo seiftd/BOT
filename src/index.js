@@ -21,9 +21,13 @@ const ProfileHandler = require('./handlers/profileHandler');
 const ReferralHandler = require('./handlers/referralHandler');
 const AdminHandler = require('./handlers/adminHandler');
 
+// WebApp Server
+const WebAppServer = require('./webapp/server');
+
 class NAVIGiBot {
     constructor() {
         this.bot = null;
+        this.webAppServer = null;
         this.isInitialized = false;
     }
 
@@ -55,6 +59,10 @@ class NAVIGiBot {
             
             // Create some sample ads if none exist
             await this.createSampleAds();
+            
+            // Start WebApp server
+            this.webAppServer = new WebAppServer();
+            this.webAppServer.start(process.env.PORT || 3000);
             
             this.isInitialized = true;
             console.log('✅ NAVIGi Bot is ready!');
