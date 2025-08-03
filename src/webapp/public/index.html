@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>NAVIGi - Earn Rewards</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <!-- Loading Screen -->
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Loading NAVIGi...</p>
+        </div>
+
+        <!-- Main App -->
+        <div id="main-app" class="hidden">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-content">
+                    <div class="user-info">
+                        <div class="avatar" id="user-avatar">👤</div>
+                        <div class="user-details">
+                            <h1 id="user-name">Welcome</h1>
+                            <div class="points-display">
+                                <span class="points" id="user-points">0</span>
+                                <span class="points-label">points</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vip-badge" id="vip-badge" style="display: none;">
+                        <span id="vip-level">VIP</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Navigation -->
+            <nav class="navigation">
+                <button class="nav-btn active" data-section="earn">
+                    <div class="nav-icon">📺</div>
+                    <div class="nav-label">Earn</div>
+                </button>
+                <button class="nav-btn" data-section="tasks">
+                    <div class="nav-icon">📋</div>
+                    <div class="nav-label">Tasks</div>
+                </button>
+                <button class="nav-btn" data-section="contests">
+                    <div class="nav-icon">🏆</div>
+                    <div class="nav-label">Contests</div>
+                </button>
+                <button class="nav-btn" data-section="profile">
+                    <div class="nav-icon">👤</div>
+                    <div class="nav-label">Profile</div>
+                </button>
+            </nav>
+
+            <!-- Content Sections -->
+            <main class="content">
+                <!-- Earn Section -->
+                <section id="earn-section" class="section active">
+                    <div class="section-header">
+                        <h2>💰 Earn Points</h2>
+                        <p>Watch ads and earn rewards</p>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-value" id="ads-watched">0</div>
+                            <div class="stat-label">Ads Today</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="ads-limit">20</div>
+                            <div class="stat-label">Daily Limit</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="points-value">$0.00</div>
+                            <div class="stat-label">USDT Value</div>
+                        </div>
+                    </div>
+
+                    <div class="ad-section">
+                        <div class="ad-card">
+                            <div class="ad-icon">📺</div>
+                            <div class="ad-content">
+                                <h3>Watch Advertisement</h3>
+                                <p>Earn 1 point per ad watched</p>
+                            </div>
+                            <button id="watch-ad-btn" class="btn btn-primary">
+                                Watch Ad
+                            </button>
+                        </div>
+                        <div id="ad-timer" class="timer hidden">
+                            <div class="timer-content">
+                                <div class="timer-icon">⏰</div>
+                                <div class="timer-text">
+                                    Next ad in: <span id="timer-countdown">02:00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- VIP Mining Section -->
+                    <div id="vip-mining" class="vip-section hidden">
+                        <div class="mining-card">
+                            <div class="mining-icon">⛏️</div>
+                            <div class="mining-content">
+                                <h3>VIP Mining</h3>
+                                <p id="mining-points">0 points available</p>
+                            </div>
+                            <button id="claim-mining-btn" class="btn btn-gold">
+                                Claim Rewards
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tasks Section -->
+                <section id="tasks-section" class="section">
+                    <div class="section-header">
+                        <h2>📋 Daily Tasks</h2>
+                        <p>Complete tasks to earn extra points</p>
+                    </div>
+
+                    <div class="tasks-list">
+                        <div class="task-card" id="login-task">
+                            <div class="task-icon">🔄</div>
+                            <div class="task-content">
+                                <h3>Daily Login</h3>
+                                <p>Login daily to earn 1 point</p>
+                            </div>
+                            <button class="task-btn btn btn-secondary">
+                                Claim
+                            </button>
+                        </div>
+
+                        <div class="task-card" id="channel-task">
+                            <div class="task-icon">📢</div>
+                            <div class="task-content">
+                                <h3>Subscribe to Channel</h3>
+                                <p>Subscribe to @NAVIGI_E for 1 point</p>
+                            </div>
+                            <button class="task-btn btn btn-secondary">
+                                Check
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contests Section -->
+                <section id="contests-section" class="section">
+                    <div class="section-header">
+                        <h2>🏆 Contests</h2>
+                        <p>Participate in contests to win prizes</p>
+                    </div>
+
+                    <div class="contests-list">
+                        <div class="contest-card" data-contest="daily">
+                            <div class="contest-header">
+                                <h3>📅 Daily Contest</h3>
+                                <div class="contest-status">Not Joined</div>
+                            </div>
+                            <div class="contest-content">
+                                <p>Watch 10 ads to qualify</p>
+                                <div class="contest-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 0%"></div>
+                                    </div>
+                                    <span class="progress-text">0/10</span>
+                                </div>
+                            </div>
+                            <button class="contest-btn btn btn-primary">Join Contest</button>
+                        </div>
+
+                        <div class="contest-card" data-contest="weekly">
+                            <div class="contest-header">
+                                <h3>📅 Weekly Contest</h3>
+                                <div class="contest-status">Not Joined</div>
+                            </div>
+                            <div class="contest-content">
+                                <p>Watch 30 ads to qualify</p>
+                                <div class="contest-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 0%"></div>
+                                    </div>
+                                    <span class="progress-text">0/30</span>
+                                </div>
+                            </div>
+                            <button class="contest-btn btn btn-primary">Join Contest</button>
+                        </div>
+
+                        <div class="contest-card" data-contest="monthly">
+                            <div class="contest-header">
+                                <h3>📅 Monthly Contest</h3>
+                                <div class="contest-status">Not Joined</div>
+                            </div>
+                            <div class="contest-content">
+                                <p>Watch 200 ads to qualify</p>
+                                <div class="contest-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 0%"></div>
+                                    </div>
+                                    <span class="progress-text">0/200</span>
+                                </div>
+                            </div>
+                            <button class="contest-btn btn btn-primary">Join Contest</button>
+                        </div>
+
+                        <div class="contest-card vip-only" data-contest="vip" style="display: none;">
+                            <div class="contest-header">
+                                <h3>💎 VIP Contest</h3>
+                                <div class="contest-status">Not Joined</div>
+                            </div>
+                            <div class="contest-content">
+                                <p>Watch 50 ads to qualify (VIP Only)</p>
+                                <div class="contest-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 0%"></div>
+                                    </div>
+                                    <span class="progress-text">0/50</span>
+                                </div>
+                            </div>
+                            <button class="contest-btn btn btn-gold">Join Contest</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Profile Section -->
+                <section id="profile-section" class="section">
+                    <div class="section-header">
+                        <h2>👤 Profile</h2>
+                        <p>Your account information and statistics</p>
+                    </div>
+
+                    <div class="profile-stats">
+                        <div class="profile-card">
+                            <div class="profile-item">
+                                <span class="profile-label">Total Points:</span>
+                                <span class="profile-value" id="profile-points">0</span>
+                            </div>
+                            <div class="profile-item">
+                                <span class="profile-label">USDT Value:</span>
+                                <span class="profile-value" id="profile-usdt">$0.00</span>
+                            </div>
+                            <div class="profile-item">
+                                <span class="profile-label">VIP Status:</span>
+                                <span class="profile-value" id="profile-vip">None</span>
+                            </div>
+                            <div class="profile-item">
+                                <span class="profile-label">Referrals:</span>
+                                <span class="profile-value" id="profile-referrals">0</span>
+                            </div>
+                        </div>
+
+                        <div class="referral-section">
+                            <h3>👥 Referral Program</h3>
+                            <p>Invite friends and earn 1 point per referral!</p>
+                            <div class="referral-link">
+                                <input type="text" id="referral-link" readonly placeholder="Loading...">
+                                <button id="copy-referral" class="btn btn-secondary">Copy</button>
+                            </div>
+                            <button id="share-referral" class="btn btn-primary">Share Link</button>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- Toast Notifications -->
+        <div id="toast-container" class="toast-container"></div>
+
+        <!-- Modals -->
+        <div id="ad-modal" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>📺 Watching Advertisement</h3>
+                    <button class="modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="ad-player">
+                        <div class="ad-placeholder">
+                            <div class="ad-spinner"></div>
+                            <p>Advertisement is playing...</p>
+                            <div class="ad-countdown">
+                                <span id="ad-countdown">30</span>s
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

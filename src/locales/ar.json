@@ -1,0 +1,147 @@
+{
+  "welcome": {
+    "title": "🎉 مرحباً بك في NAVIGi!",
+    "message": "مرحباً بك في NAVIGi! أفضل منصة لمشاهدة الإعلانات وكسب المكافآت.\n\n💰 اكسب نقاط من مشاهدة الإعلانات\n🏆 شارك في المسابقات\n💎 قم بالترقية إلى VIP للمزيد من المزايا\n💸 اسحب أرباحك\n\nاضغط /start لبدء رحلتك!",
+    "returning": "مرحباً بعودتك! 🎉\nرصيدك الحالي: {points} نقطة"
+  },
+  "menu": {
+    "main": "🏠 القائمة الرئيسية",
+    "earn": "💰 اربح",
+    "contests": "🏆 المسابقات",
+    "vip": "💎 VIP",
+    "profile": "👤 الملف الشخصي",
+    "referral": "👥 الإحالة",
+    "settings": "⚙️ الإعدادات"
+  },
+  "earn": {
+    "title": "💰 اربح النقاط",
+    "watch_ads": "📺 شاهد الإعلانات ({watched}/{limit})",
+    "daily_tasks": "📋 المهام اليومية",
+    "mining": "⛏️ تعدين VIP",
+    "no_ads": "❌ لا توجد إعلانات متاحة. حاول مرة أخرى لاحقاً!",
+    "daily_limit": "🚫 لقد وصلت إلى الحد اليومي للإعلانات!",
+    "timer_wait": "⏰ يرجى الانتظار {minutes}د {seconds}ث قبل مشاهدة الإعلان التالي",
+    "ad_completed": "✅ تم إكمال الإعلان! لقد ربحت {points} نقطة!",
+    "vip_bonus": "💎 مكافأة VIP: +{bonus} نقطة!"
+  },
+  "daily_tasks": {
+    "title": "📋 المهام اليومية",
+    "login": "🔄 تسجيل الدخول اليومي",
+    "channel_sub": "📢 الاشتراك في القناة",
+    "completed": "✅ مكتمل",
+    "claim": "🎁 استلام ({points} نقطة)",
+    "claimed": "✅ تم الاستلام",
+    "timer": "⏰ متاح في {hours}س {minutes}د",
+    "login_claimed": "🎁 تم استلام مكافأة تسجيل الدخول اليومي! +{points} نقطة",
+    "channel_claimed": "🎁 تم استلام مكافأة الاشتراك في القناة! +{points} نقطة",
+    "check_subscription": "❌ يرجى الاشتراك في قناتنا أولاً: {channel}"
+  },
+  "contests": {
+    "title": "🏆 المسابقات",
+    "daily": "📅 المسابقة اليومية",
+    "weekly": "📅 المسابقة الأسبوعية",
+    "monthly": "📅 المسابقة الشهرية",
+    "vip": "💎 مسابقة VIP",
+    "not_eligible": "❌ تحتاج لمشاهدة {required} إعلان للمشاركة",
+    "joined": "✅ لقد انضممت للمسابقة!",
+    "already_joined": "⚠️ أنت مشارك بالفعل في هذه المسابقة",
+    "ended": "⏰ انتهت هذه المسابقة",
+    "winner": "🎉 تهانينا! لقد فزت بـ {points} نقطة!",
+    "no_contest": "❌ لا توجد مسابقة نشطة متاحة",
+    "requirements": "📋 المتطلبات: شاهد {ads} إعلان بفواصل {timer} دقيقة",
+    "progress": "📊 التقدم: {watched}/{required} إعلان",
+    "time_left": "⏰ الوقت المتبقي: {time}",
+    "winners": "🏆 الفائزون: {count}",
+    "prize": "🎁 الجائزة: {prize}"
+  },
+  "vip": {
+    "title": "💎 ترقية VIP",
+    "current": "الحالي: {level}",
+    "expires": "ينتهي في: {date}",
+    "king": {
+      "name": "👑 King VIP",
+      "price": "$2.5 USDT",
+      "benefits": "• 10 نقاط تعدين يومي\n• حد 30 إعلان يومياً\n• الوصول لمسابقات VIP"
+    },
+    "emperor": {
+      "name": "👨‍💼 Emperor VIP",
+      "price": "$9 USDT",
+      "benefits": "• 25 نقطة تعدين يومي\n• حد 40 إعلان يومياً\n• الوصول لمسابقات VIP\n• قائمة المتصدرين VIP"
+    },
+    "lord": {
+      "name": "🏛️ Lord VIP",
+      "price": "$20 USDT",
+      "benefits": "• 40 نقطة تعدين يومي\n• حد 60 إعلان يومياً\n• الوصول لمسابقات VIP\n• الحد الأدنى للسحب: $2 USDT\n• قائمة المتصدرين VIP"
+    },
+    "purchase": "💳 شراء",
+    "payment_methods": "💳 طرق الدفع:\n\n🟡 TRC20 USDT:\n`{trc20}`\n\n💎 TON (1 TON = $3.6):\n`{ton}`\n\nأرسل الدفعة ثم أرسل hash المعاملة",
+    "payment_sent": "✅ تم إرسال الدفعة! يرجى انتظار موافقة الإدارة.",
+    "invalid_hash": "❌ تنسيق hash المعاملة غير صحيح",
+    "mining_claimed": "⛏️ تم استلام مكافأة التعدين! +{points} نقطة",
+    "mining_available": "⛏️ التعدين متاح! اضغط لاستلام {points} نقطة",
+    "no_mining": "❌ لا توجد مكافآت تعدين متاحة"
+  },
+  "profile": {
+    "title": "👤 الملف الشخصي",
+    "points": "💰 النقاط: {points}",
+    "usdt_value": "💵 القيمة: ${usdt} USDT",
+    "vip_status": "💎 VIP: {level}",
+    "vip_expires": "⏰ ينتهي في: {date}",
+    "referrals": "👥 الإحالات: {count}",
+    "withdraw": "💸 سحب",
+    "history": "📊 التاريخ"
+  },
+  "withdraw": {
+    "title": "💸 سحب",
+    "methods": "اختر طريقة السحب:",
+    "binance_pay": "🟡 Binance Pay (الحد الأدنى: ${min} USDT)",
+    "ton_wallet": "💎 محفظة TON (الحد الأدنى: {min} TON)",
+    "usdt_trc20": "🟢 USDT TRC20 (الحد الأدنى: ${min} USDT)",
+    "insufficient": "❌ الرصيد غير كافي. تحتاج {required} نقطة (${usdt} USDT)",
+    "enter_address": "أدخل {method} الخاص بك:",
+    "confirm": "تأكيد السحب:\n💰 المبلغ: {points} نقطة (${usdt} USDT)\n📍 العنوان: {address}\n💳 الطريقة: {method}",
+    "submitted": "✅ تم إرسال طلب السحب! يرجى انتظار المعالجة.",
+    "invalid_address": "❌ تنسيق العنوان غير صحيح"
+  },
+  "referral": {
+    "title": "👥 نظام الإحالة",
+    "code": "🔗 رابط الإحالة الخاص بك:\n{link}",
+    "stats": "📊 إحصائياتك:\n👥 إجمالي الإحالات: {count}\n💰 الأرباح: {points} نقطة",
+    "leaderboard": "🏆 قائمة المتصدرين الأسبوعية",
+    "share": "📤 مشاركة الرابط",
+    "reward": "🎁 +{points} نقطة للإحالة الجديدة!",
+    "vip_bonus": "💎 +{points} نقطة لإحالة VIP!"
+  },
+  "admin": {
+    "title": "👨‍💼 لوحة الإدارة",
+    "users": "👥 المستخدمون: {count}",
+    "pending_vip": "💎 VIP معلق: {count}",
+    "pending_withdrawals": "💸 السحوبات المعلقة: {count}",
+    "send_notification": "📢 إرسال إشعار",
+    "manage_contests": "🏆 إدارة المسابقات",
+    "manage_ads": "📺 إدارة الإعلانات",
+    "approve_payments": "✅ الموافقة على المدفوعات",
+    "user_management": "👥 إدارة المستخدمين"
+  },
+  "buttons": {
+    "back": "⬅️ رجوع",
+    "refresh": "🔄 تحديث",
+    "confirm": "✅ تأكيد",
+    "cancel": "❌ إلغاء",
+    "next": "➡️ التالي",
+    "previous": "⬅️ السابق",
+    "close": "❌ إغلاق"
+  },
+  "errors": {
+    "generic": "❌ حدث خطأ. يرجى المحاولة مرة أخرى.",
+    "not_found": "❌ غير موجود",
+    "permission_denied": "❌ الإذن مرفوض",
+    "rate_limit": "⏰ يرجى الانتظار قبل المحاولة مرة أخرى",
+    "maintenance": "🔧 البوت قيد الصيانة. يرجى المحاولة لاحقاً."
+  },
+  "success": {
+    "generic": "✅ تمت العملية بنجاح!",
+    "saved": "✅ تم الحفظ بنجاح!",
+    "updated": "✅ تم التحديث بنجاح!"
+  }
+}
